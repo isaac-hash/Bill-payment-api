@@ -1,5 +1,7 @@
 <?php
 
+// Auth Controller
+
 namespace App\Http\Controllers;
 
 use App\Models\User;

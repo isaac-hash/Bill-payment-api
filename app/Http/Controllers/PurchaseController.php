@@ -1,4 +1,5 @@
 <?php
+//Purchase Controller
 
 namespace App\Http\Controllers;
 

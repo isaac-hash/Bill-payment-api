@@ -1,4 +1,5 @@
 <?php
+//Bill Controller
 
 namespace App\Http\Controllers;
 
@@ -44,6 +45,9 @@ class BillController extends Controller
         });
 
         return response()->json(['message' => 'Bill payment successful!'], 201);
+        if ($wallet->balance < $validated['amount']) {
+            return response()->json(['message' => 'Insufficient wallet balance.'], 400);
+        }
     }
 }
 
